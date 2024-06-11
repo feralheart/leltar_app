@@ -1,0 +1,20 @@
+version: '3.9'
+services:
+  inventory_frontend:
+    container_name: inventory_frontend
+    environment:
+      - HOST=0.0.0.0
+    ports:
+      - "80:3000"
+    build:
+      context: .
+      dockerfile: site.Dockerfile
+      target: development
+    volumes:
+      - './frontend:/opt/site'
+      - './locales:/opt/site/locales'
+    networks:
+      - "inventory_app"
+networks:
+  inventory_app: 
+    driver: bridge
