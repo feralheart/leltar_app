@@ -1,0 +1,4 @@
+.main-wrapper {
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%#f2a32a),color-stop(100%#fef1d1)) !important;
+    background-image: linear-gradient(#f2a32a,#fef1d1) !important;
+}

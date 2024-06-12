@@ -1,0 +1,27 @@
+<template>
+    <header>
+		<v-app-bar app>
+			<v-toolbar-title>
+				<p class="logo-font">
+					Inventory app
+				</p>
+			</v-toolbar-title>
+			<v-spacer></v-spacer>
+			<v-toolbar-items>
+				<v-tabs 
+                    active-class="nuxt-link-active"
+                    align-with-title
+                    right>
+					<v-tab
+						:nuxt="true"
+						to="/">
+						Home
+					</v-tab>
+				</v-tabs>
+			</v-toolbar-items>
+		</v-app-bar>
+    </header>
+</template>
+<script>
+
+</script>
