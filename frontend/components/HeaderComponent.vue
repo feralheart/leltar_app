@@ -18,6 +18,66 @@
 						Home
 					</v-tab>
 				</v-tabs>
+				<v-tabs 
+                    active-class="nuxt-link-active"
+                    align-with-title
+                    right>
+					<v-tab
+						:nuxt="true"
+						to="/">
+						Retailers
+					</v-tab>
+				</v-tabs>
+				<v-tabs 
+                    active-class="nuxt-link-active"
+                    align-with-title
+                    right>
+					<v-tab
+						:nuxt="true"
+						to="/inventory">
+						Inventory
+					</v-tab>
+				</v-tabs>
+				<v-tabs 
+                    active-class="nuxt-link-active"
+                    align-with-title
+                    right>
+					<v-tab
+						:nuxt="true"
+						to="/">
+						Costumers
+					</v-tab>
+				</v-tabs>
+				<v-tabs 
+                    active-class="nuxt-link-active"
+                    align-with-title
+                    right>
+					<v-tab
+						:nuxt="true"
+						to="/">
+						Users
+					</v-tab>
+				</v-tabs>
+				<v-tabs 
+                    active-class="nuxt-link-active"
+                    align-with-title
+                    right>
+					<v-tab
+						:nuxt="true"
+						to="/">
+						Purchases
+					</v-tab>
+				</v-tabs>
+				<v-tabs 
+                    active-class="nuxt-link-active"
+                    align-with-title
+                    right>
+					<v-tab
+						:nuxt="true"
+						to="/">
+						Purchases
+					</v-tab>
+				</v-tabs>
 			</v-toolbar-items>
 		</v-app-bar>
     </header>
