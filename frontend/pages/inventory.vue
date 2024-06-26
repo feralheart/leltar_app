@@ -187,22 +187,26 @@
 
 			deleteItemConfirm() {
 				this.inventory.splice(this.editedIndex, 1)
+				this.$snackbar.add({
+					type: 'success',
+					text: 'Item deleted successfully'
+				})
 				this.closeDelete()
 			},
 
 			close() {
 				this.dialog = false
 				this.$nextTick(() => {
-				this.editedItem = Object.assign({}, this.defaultItem)
-				this.editedIndex = -1
+					this.editedItem = Object.assign({}, this.defaultItem)
+					this.editedIndex = -1
 				})
 			},
 
 			closeDelete() {
 				this.dialogDelete = false
 				this.$nextTick(() => {
-				this.editedItem = Object.assign({}, this.defaultItem)
-				this.editedIndex = -1
+					this.editedItem = Object.assign({}, this.defaultItem)
+					this.editedIndex = -1
 				})
 			},
 
@@ -212,6 +216,10 @@
 				} else {
 				this.inventory.push(this.editedItem)
 				}
+				this.$snackbar.add({
+					type: 'success',
+					text: 'Item saved successfully'
+				})
 				this.close()
 			},
 		},

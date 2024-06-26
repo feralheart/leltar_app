@@ -82,6 +82,10 @@
 	const { logUserOut } = useAuthStore();
 	const logout = () => {
 		logUserOut();
+		this.$snackbar.add({
+			type: 'success',
+			text: 'Successfully logged out'
+		})
 		router.push('/login');
 	};
 </script>

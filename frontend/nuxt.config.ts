@@ -13,8 +13,14 @@ export default defineNuxtConfig({
       })
     },
     '@pinia/nuxt',
+    'nuxt-snackbar'
     //...
   ],
+  snackbar: {
+    bottom: true,
+    right: true,
+    duration: 3000
+  },
   vite: {
     vue: {
       template: {

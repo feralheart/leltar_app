@@ -41,10 +41,19 @@
 				const router = useRouter()
 				const { authenticateUser } = useAuthStore();
 				const { authenticated } = storeToRefs(useAuthStore());
-				console.log(this.email, this.password);
 				await authenticateUser({ username: this.email, password: this.password });
 				if (authenticated) {
+					this.$snackbar.add({
+						type: 'success',
+						text: 'Successfully logged in'
+					})
+
 					router.push('/inventory');
+				} else {
+					this.$snackbar.add({
+						type: 'error',
+						text: 'E-mail or password incorrect'
+					})
 				}
 			},
 		},
