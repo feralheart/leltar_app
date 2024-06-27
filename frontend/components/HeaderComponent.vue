@@ -36,7 +36,7 @@
 					</v-tab>
 					<v-tab
 						:nuxt="true"
-						to="/">
+						to="/retailers">
 						Retailers
 					</v-tab>
 					<v-tab
