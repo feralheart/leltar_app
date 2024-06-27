@@ -46,7 +46,7 @@
 					</v-tab>
 					<v-tab
 						:nuxt="true"
-						to="/">
+						to="/customers">
 						Costumers
 					</v-tab>
 					<v-tab
