@@ -51,13 +51,8 @@
 					</v-tab>
 					<v-tab
 						:nuxt="true"
-						to="/">
+						to="/users">
 						Users
-					</v-tab>
-					<v-tab
-						:nuxt="true"
-						to="/">
-						Purchases
 					</v-tab>
 					<v-tab
 						:nuxt="true"

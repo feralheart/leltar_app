@@ -12,7 +12,6 @@ export const useInventoryStore = defineStore('inventory', {
 			});
 
 			if (data.value) {
-				this.inventory = data?.value?.product;
 				const products = data?.value?.products;
 				const inventory = [];
 				for(const product of products) {
