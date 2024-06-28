@@ -56,7 +56,7 @@
 					</v-tab>
 					<v-tab
 						:nuxt="true"
-						to="/">
+						to="/purchases">
 						Purchases
 					</v-tab>
 					<v-tab
