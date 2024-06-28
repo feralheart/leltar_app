@@ -60,6 +60,11 @@
 						Purchases
 					</v-tab>
 					<v-tab
+						:nuxt="true"
+						to="/carousel">
+						Carousel
+					</v-tab>
+					<v-tab
 						@click="logout()">
 						Logout
 					</v-tab>
