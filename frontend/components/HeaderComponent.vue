@@ -73,19 +73,25 @@
 		</v-app-bar>
     </header>
 </template>
+<script>
+	import { useAuthStore } from '~/store/auth';
+
+	export default {
+		methods: {
+			async logout(){
+				await logUserOut();
+				this.$snackbar.add({
+					type: 'success',
+					text: 'Successfully logged out'
+				})
+				router.push('/login');
+			},
+		}
+	};
+</script>
 <script setup>
 	import { storeToRefs } from 'pinia';
 	import { useAuthStore } from '~/store/auth';
 
-	const router = useRouter();	
 	const { authenticated } = storeToRefs(useAuthStore());
-	const { logUserOut } = useAuthStore();
-	const logout = () => {
-		logUserOut();
-		this.$snackbar.add({
-			type: 'success',
-			text: 'Successfully logged out'
-		})
-		router.push('/login');
-	};
 </script>

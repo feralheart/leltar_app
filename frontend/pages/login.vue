@@ -5,21 +5,20 @@
 		</v-toolbar>
 		<v-card-text>
 			<v-form ref="form" @submit.prevent="login()">
-					<v-text-field
+				<v-text-field
 					v-model="email"
 					name="email"
 					label="Email"
 					type="text"
-					required
-				></v-text-field>
-				
-					<v-text-field
+					required>
+				</v-text-field>
+				<v-text-field
 					v-model="password"
 					name="password"
 					label="Password"
 					type="password"
-					required
-				></v-text-field>
+					required>
+				</v-text-field>
 				<v-btn type="submit" class="mt-4" color="primary" value="log in">Login</v-btn>
 			</v-form>
 		</v-card-text>
@@ -40,9 +39,10 @@
 			async login() {
 				const router = useRouter()
 				const { authenticateUser } = useAuthStore();
-				const { authenticated } = storeToRefs(useAuthStore());
 				await authenticateUser({ username: this.email, password: this.password });
-				if (authenticated) {
+				const { authenticated } = storeToRefs(useAuthStore());
+				console.log(authenticated.value);
+				if (authenticated.value === true) {
 					this.$snackbar.add({
 						type: 'success',
 						text: 'Successfully logged in'

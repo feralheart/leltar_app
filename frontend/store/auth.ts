@@ -12,20 +12,15 @@ export const useAuthStore = defineStore('auth', {
 	}),
 	actions: {
 		async authenticateUser({ username, password }: UserPayloadInterface) {
-			const { data, pending }: any = await useFetch('https://dummyjson.com/auth/login', {
-				method: 'post',
-				headers: { 'Content-Type': 'application/json' },
-				body: {
-				username,
-				password,
-				},
-			});
-
-			if (data.value) {
+			if (username === 'dummyEmail' && password === 'dummyPassword') {
+				console.log('if');
 				const token = useCookie('token');
-				token.value = data?.value?.token;
+				token.value = 'dummyToken';
 				this.authenticated = true;
-			  }
+			} else {
+				console.log('else');
+				this.authenticated = false;
+			}
 		},
 		logUserOut() {
 			const token = useCookie('token');
