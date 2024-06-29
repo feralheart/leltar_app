@@ -79,6 +79,7 @@
 	export default {
 		methods: {
 			async logout(){
+				const { logUserOut } = useAuthStore();
 				await logUserOut();
 				this.$snackbar.add({
 					type: 'success',

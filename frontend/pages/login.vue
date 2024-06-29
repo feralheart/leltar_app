@@ -41,7 +41,6 @@
 				const { authenticateUser } = useAuthStore();
 				await authenticateUser({ username: this.email, password: this.password });
 				const { authenticated } = storeToRefs(useAuthStore());
-				console.log(authenticated.value);
 				if (authenticated.value === true) {
 					this.$snackbar.add({
 						type: 'success',
