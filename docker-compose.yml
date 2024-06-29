@@ -5,7 +5,7 @@ services:
     environment:
       - HOST=0.0.0.0
     ports:
-      - "80:3000"
+      - "${SITE_PORT}:3000"
     build:
       context: .
       dockerfile: site.Dockerfile
